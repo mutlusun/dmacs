@@ -277,7 +277,7 @@ dmacs_summary_single <- function (LambdaR, LambdaF,
       MeanDiff <- sum(ItemDeltaMean, na.rm = TRUE)
       names(MeanDiff) <- colnames(LambdaR)
 
-      list(DMACS = DMACS, DMACS_signed = DMACS_signed, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff)
+      list(DMACS = DMACS, DMACS_signed = DMACS_signed, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff, SD = SD)
 
     } else {
 
@@ -324,7 +324,7 @@ dmacs_summary_single <- function (LambdaR, LambdaF,
 
       MeanDiff <- colSums(ItemDeltaMean, na.rm = TRUE)
 
-      list(DMACS = DMACS, DMACS_signed = DMACS_signed, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff)
+      list(DMACS = DMACS, DMACS_signed = DMACS_signed, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff, SD = SD)
 
 
     }
@@ -353,7 +353,7 @@ dmacs_summary_single <- function (LambdaR, LambdaF,
 
       VarDiff <- delta_var(LambdaR, LambdaF, VarF)
       names(VarDiff) <- colnames(LambdaR)
-      list(DMACS = DMACS, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff, VarDiff = VarDiff)
+      list(DMACS = DMACS, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff, VarDiff = VarDiff, SD = SD)
 
 
     } else {
@@ -396,7 +396,7 @@ dmacs_summary_single <- function (LambdaR, LambdaF,
       #VarDiff <- delta_var(LambdaR, LambdaF, VarF)
 
 
-      list(DMACS = DMACS, DMACS_signed = DMACS_signed, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff)#, VarDiff = VarDiff)
+      list(DMACS = DMACS, DMACS_signed = DMACS_signed, ItemDeltaMean = ItemDeltaMean, MeanDiff = MeanDiff, SD = SD)#, VarDiff = VarDiff)
     }
 
   }
